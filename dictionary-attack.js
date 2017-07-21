@@ -13,7 +13,19 @@ function init() {
 window.onload = init;
 
 /* ADD YOUR CODE BELOW */
-define()
-function checkPassword() {
-
+function checkPassword(inputtxt) {
+    //match Password with all words in the dictionary-attack.txt
+if(inputtxt.value.match(wordsList))
+{
+alert('Your password is too weak. Please find another one!')
+return true;
 }
+else
+{
+alert('Your password is strong! Congratulations...A++')
+return false;
+}
+}
+
+init();
+checkPassword()
